@@ -6,7 +6,7 @@
     define('CONTROL',true);
 
     //verify if the user is logged in
-    $usuario_logado = $_SESSION['usuario'] ?? null;
+    $usuario_logado = $_SESSION['user'] ?? null;
 
     //veryfy URL route
     if(empty($usuario_logado)){
@@ -19,6 +19,10 @@
     $rotas = [
         'login' => 'login.php',
         'home' => 'home.php',
+        'logout' => 'logout.php',
+        'about' => 'about.php',
+        'contact' => 'contact.php',
+        'services' => 'services.php'
     ];
 
     if(!key_exists($rota,$rotas)){
